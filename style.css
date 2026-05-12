@@ -531,6 +531,75 @@ body {
 }
 
 /* ===========================
+   LAS 3 P
+=========================== */
+.tres-p {
+    background: var(--verde-oscuro);
+    padding: var(--padding-sec) 0;
+}
+
+.tres-p__header {
+    margin-bottom: 64px;
+}
+
+.tres-p__header h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    color: var(--blanco);
+    letter-spacing: -0.02em;
+    margin-top: 12px;
+}
+
+.tres-p__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.tres-p__item {
+    position: relative;
+    padding: 40px 32px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.04);
+    transition: background 0.2s;
+}
+
+.tres-p__item:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.tres-p__letra {
+    display: block;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1;
+    color: rgba(255,255,255,0.07);
+    letter-spacing: -0.04em;
+    margin-bottom: 16px;
+}
+
+.tres-p__item h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--blanco);
+    margin-bottom: 12px;
+}
+
+.tres-p__item p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+    .tres-p__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* ===========================
    CONTACTO
 =========================== */
 .contact {
