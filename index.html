@@ -206,5 +206,23 @@
         </div>
     </footer>
 
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.section__header, .timeline__item, .card, .service, .manifiesto__inner, .contact').forEach((el, i) => {
+            el.classList.add('fade-up');
+            if (i % 3 === 1) el.classList.add('delay-1');
+            if (i % 3 === 2) el.classList.add('delay-2');
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
