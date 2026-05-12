@@ -462,6 +462,44 @@ body {
 }
 
 /* ===========================
+   MANIFIESTO
+=========================== */
+.manifiesto {
+    background: var(--negro);
+    padding: var(--padding-sec) 0;
+}
+
+.manifiesto__inner {
+    max-width: 800px;
+}
+
+.manifiesto__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--verde-claro);
+    margin-bottom: 32px;
+}
+
+.manifiesto__titulo {
+    font-size: clamp(56px, 9vw, 100px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--blanco);
+    margin-bottom: 40px;
+}
+
+.manifiesto__texto {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 560px;
+}
+
+/* ===========================
    CONTACTO
 =========================== */
 .contact {
