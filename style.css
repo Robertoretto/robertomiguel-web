@@ -152,6 +152,25 @@ body {
     background: var(--verde-medio) !important;
 }
 
+.nav__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav__hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--verde-oscuro);
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
 /* ===========================
    HERO
 =========================== */
@@ -466,8 +485,8 @@ body {
 =========================== */
 .services {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
 }
 
 .service__number {
@@ -689,8 +708,43 @@ body {
         --padding-sec: 64px;
     }
 
+    .nav__hamburger {
+        display: flex;
+    }
+
     .nav__links {
         display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.98);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--gris-200);
+        flex-direction: column;
+        padding: 8px 24px 20px;
+        gap: 0;
+    }
+
+    .nav__links.open {
+        display: flex;
+    }
+
+    .nav__links li {
+        border-bottom: 1px solid var(--gris-200);
+    }
+
+    .nav__links a {
+        display: block;
+        padding: 14px 0;
+        font-size: 16px;
+    }
+
+    .nav__cta {
+        margin-top: 8px;
+        text-align: center;
+        display: block;
+        padding: 12px 0 !important;
     }
 
     .hero__title {
@@ -709,6 +763,10 @@ body {
     .services {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .nav {
+        position: relative;
     }
 }
 

@@ -16,12 +16,15 @@
     <nav class="nav">
         <div class="nav__inner">
             <span class="nav__logo">Roberto Miguel</span>
-            <ul class="nav__links">
+            <ul class="nav__links" id="navLinks">
                 <li><a href="#historia">Historia</a></li>
                 <li><a href="#marcas">Marcas</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto" class="nav__cta">Contacto</a></li>
             </ul>
+            <button class="nav__hamburger" id="navToggle" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
@@ -118,8 +121,8 @@
                 <div class="timeline__item timeline__item--current">
                     <div class="timeline__year">Hoy</div>
                     <div class="timeline__content">
-                        <h3>Emprendedor en múltiples frentes</h3>
-                        <p>NUTRICIONE® consolidada, software en desarrollo, hostelería, tiendas físicas. Diez años construyendo negocios desde Salamanca — y los que quedan, con mi familia al lado.</p>
+                        <h3>Construyendo el ecosistema</h3>
+                        <p>NUTRICIONE® consolidada con fábrica industrial propia. En paralelo: un laboratorio de análisis nutricional (CIBAN), una certificadora con acceso a la EFSA europea (IBEN), un software con IA para nutricionistas (FORMULA PET) y una agencia digital junto a Vega (RONOA). Todo construido desde Salamanca, todo desde cero, y con mis hijos mirando.</p>
                     </div>
                 </div>
             </div>
@@ -188,6 +191,11 @@
                     <div class="service__number">02</div>
                     <h3>Consultoría de producción</h3>
                     <p>¿Tienes una marca artesanal y quieres dar el salto a escala industrial? Te ayudo a diseñar el proceso, elegir maquinaria y optimizar costes — sin cometer los errores que cometí yo al principio.</p>
+                </div>
+                <div class="service">
+                    <div class="service__number">03</div>
+                    <h3>Validación y certificación científica</h3>
+                    <p>A través de CIBAN e IBEN, marcas del sector pueden validar sus fórmulas con respaldo científico real y acceder a la certificación europea. Para quien quiera que su producto no solo funcione — sino que pueda demostrarlo ante cualquier organismo.</p>
                 </div>
             </div>
         </div>
@@ -262,6 +270,12 @@
                 }
             });
         }, { threshold: 0.12 });
+
+        // Menú hamburguesa
+        const toggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
         document.querySelectorAll('.section__header, .timeline__item, .card, .service, .manifiesto__inner, .contact').forEach((el, i) => {
             el.classList.add('fade-up');
