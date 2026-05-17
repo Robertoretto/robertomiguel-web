@@ -450,12 +450,23 @@ body {
     background: var(--gris-200);
 }
 
+.card__logos {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
 .card__logo {
     display: block;
-    max-width: 180px;
+    max-width: 160px;
     height: auto;
-    margin-bottom: 20px;
-    opacity: 0.85;
+    opacity: 0.9;
+}
+
+.card__logo--mascota {
+    max-width: 70px;
+    border-radius: 8px;
 }
 
 .card__title {
