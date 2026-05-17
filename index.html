@@ -249,6 +249,14 @@
                     <a href="mailto:roberto@nutricione.es" class="contact__email">roberto@nutricione.es</a>
                     <a href="https://www.linkedin.com/in/roberto-miguel-ruiz-491a6a183/" target="_blank" rel="noopener" class="contact__linkedin">LinkedIn →</a>
                 </div>
+                <form class="contact__form" action="https://formspree.io/f/XXXXXXXX" method="POST">
+                    <div class="contact__form-row">
+                        <input type="text" name="nombre" placeholder="Tu nombre" required class="contact__input">
+                        <input type="email" name="email" placeholder="Tu email" required class="contact__input">
+                    </div>
+                    <textarea name="mensaje" placeholder="¿En qué puedo ayudarte?" rows="5" required class="contact__input contact__textarea"></textarea>
+                    <button type="submit" class="btn btn--primary contact__submit">Enviar mensaje</button>
+                </form>
             </div>
         </div>
     </section>
