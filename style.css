@@ -718,7 +718,9 @@ body {
     }
 
     .hero__photo {
-        display: none;
+        display: block;
+        max-width: 280px;
+        margin: 0 auto;
     }
 
     .cards {
